@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+   
+
+{% block content %}
+ <table class="ukuran container table table-striped table-bordered">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">NPM</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Alamat</th>
+        <th scope="col">Tanggal Lahir</th>
+        <th scope="col">Kelas</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for biodata in biodatas  %}
+        <tr>
+        <th scope="row">{{ biodata.npm }}</th>
+        <td>{{ biodata.nama }}</td>
+        <td>{{ biodata.alamat }}</td>
+        <td>{{ biodata.tetala }}</td>
+        <td>{{ biodata.kelas }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock  %}
